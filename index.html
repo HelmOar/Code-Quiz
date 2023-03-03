@@ -11,6 +11,8 @@
     <header>
          <!-- timer box -->
 <div id="timer" >
+    <h2>Time Left:</h2>
+    <div id="timer-sec">30</div>
 </div>
     </header>
      <!-- app starter box -->
@@ -22,11 +24,40 @@ Try to answer the following code-related questions within the time limit.<br/>Ke
         </p>
         <!-- start quiz button -->
         <button id="start-button" type="button">Start Quiz</button>
+    </div id= "container">
+    <div>
+     <!-- quiz question card -->
+     <div id="question-card">
+        <header>
+           <H3>CODE QUIZ</H3>
+        </header>
+        <section id = "q-text">
+          <div id ="question" >
+            <span id = "q-span">What does HTML stand for?</span>
+          </div >
+          <div id ="option list">
+            <div id = "option">
+                <span>HighText Machine Language</span>
+            </div>
+            <div id = "option">
+                <span>HyperText and links Markup Language</span>
+            </div>
+            <div id = "option">
+                <span>HyperText Markup Language</span>
+            </div>
+            <div id = "option">
+                <span>None of these</span>
+            </div>
+          </div>
+          <footer id="q-textfooter"></footer>
+          <button id="nextq-button">Next Question</button>
+    </section>
+        
+     </div>
     </div>
     <script src="/js/script.js"></script>
     <script src="/js/quizqs.js"></script>
     
-    <!-- quiz question card -->
-    <div id="question-card"></div>
+   
 </body>
 </html>

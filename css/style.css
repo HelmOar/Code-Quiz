@@ -4,18 +4,45 @@
     --light-lilac: #ECF2FF;
     --dark-blue:#3E54AC;
 }
+
+#question-card.activeQuiz
+{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
 header {
     background-color: #BFACE2;
 }
 #timer {
     float:right;
     background-color: #BFACE2;
-    width: 10%;
+    width: 15%;
     height: 50px;
     margin-right: 18%;
     border-radius:  5px;
     border:2px solid #3E54AC;
 }
+
+#timer-sec{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin top:0;
+    margin-bottom: 10%;
+    text-align: center;
+}
+h2 {
+    font-size:80%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+  
+
+
+
+
 #box {
     display: flex;
     flex-direction: column;
@@ -29,7 +56,7 @@ header {
     padding-bottom: 60pix;
     background-color: var(--dark-blue);
     border-radius: 5px;
-    max-height: fit-content;
+    max-height:50%;
 }
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -43,7 +70,8 @@ p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
-#start-button {
+#start-button,
+#nextq-button {
     width:30%;
     height: 30%;
     font-size: 12px;
@@ -60,7 +88,42 @@ p{
     background-color:var(--green);
     color: var(--dark-blue);
     cursor:pointer;
+}
+
+#q-textfooter{
+    display: flex;
+    justify-content: center;
+    
+}
+#div {
+    background-color: white;
+}
+    
+#question-card {
+    
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background-color:#ECF2FF;
+    border-radius:5px;
+    padding:10px;
     
     
+}
+span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#q-span {
+    font-size: larger;
+    font-weight: 600;
+}
+
+ h3  {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+ }
     
+
 }
