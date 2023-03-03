@@ -6,12 +6,12 @@ var startBox = document.querySelector("#box");
 
 // if startQuiz button clicked
 
-var startBox = "appear"
+var startBox = "active"
 
 startButton.addEventListener("click", function () {
-    if (startBox === "appear") {
-        startBox = "disappear";
-        startBox.setAttribute("id", "disappear")
+    if (startBox === "active") {
+        startBox = "inactive";
+        startBox.setAttribute("id", "inactive")
     }
 });
 
