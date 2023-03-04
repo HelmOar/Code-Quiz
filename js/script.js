@@ -36,7 +36,7 @@ console.log ("<span>" + questions [i].question + "</span>");
 
 // question = text.Content=qTag;
 //next button clicked - event listener needs a string
-
+}}
 nextqButton.addEventListener ("click", function () {
     showQuestions();
     // console.log("hello world");
