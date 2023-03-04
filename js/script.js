@@ -2,11 +2,11 @@
 var startButton = document.querySelector("#start-button");
 var questionCard = document.querySelector("#question-card");
 var startBox = document.querySelector(".box");
-
-
+var nextqButton = document.querySelector("#nextq-button");
+var currentQuestion = 1
 // if startQuiz button clicked
 // //  initiate question by click on start
-// question toggle static /active - visable/invisable
+// question toggle static /active - visible/invisible
 
 startButton.addEventListener("click", function () {
     startBox.setAttribute("class", "hide")
@@ -14,43 +14,31 @@ startButton.addEventListener("click", function () {
 });
 
 
-//question cards built into an array
-funtion showQuestions(index) {
+//question cards built into an array - grabbing the next question
+//increment through the array )-(easiest way is ++)
+function showQuestions(index) {
     var question = document.querySelector ("#question")
-}
+    // console.log(questions[currentQuestion]);
+    currentQuestion++
+} 
 
+// Displaying questions from the array
 
-for (var i = 0; i < currentQuestion.choices.length; i++) {
+function showQuestions(index){
+for (var i = 0; i < questions.length; i++) {
+console.log ("<span>" + questions [i].question + "</span>");
 
-var qTag = "<span>" +questions [index].question + "</span>";
-question = text.Content=qTag;
-}
-//next button clicked
+// if (response === questions.answer) {
+     
+// }
 
-nextqButton.addEventListener (click,function () {
+// }   
+
+// question = text.Content=qTag;
+//next button clicked - event listener needs a string
+
+nextqButton.addEventListener ("click", function () {
     showQuestions();
+    // console.log("hello world");
 }
 )
-
-
-
-
-
-    //show question box
-
-
-
-
-
-
-
-//itirated through with it statements
-
-
-
-
-
-//initiate timer by click on next question or start button
-
-// questions
-//high band scores - local storage
