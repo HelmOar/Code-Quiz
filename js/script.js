@@ -4,7 +4,10 @@ var questionCard = document.querySelector("#question-card");
 var startBox = document.querySelector(".box");
 var nextqButton = document.querySelector("#nextq-button");
 var currentQuestion = 1
-// if startQuiz button clicked
+var index = 0
+var question = document.querySelector ("#question")
+var option_list = document.querySelector ("#option_list")
+// if startQuiz button clicked"
 // //  initiate question by click on start
 // question toggle static /active - visible/invisible
 
@@ -17,32 +20,44 @@ startButton.addEventListener("click", function () {
 //question cards built into an array - grabbing the next question
 //increment through the array )-(easiest way is ++)
 function showQuestions(index) {
-    var question = document.querySelector ("#question")
+  
     // console.log(questions[currentQuestion]);
-    currentQuestion++
-} 
+    // currentQuestion++
+    // Displaying questions from the array
 
-// Displaying questions from the array
-
-// function showQuestions(index){
-// for (var i = 0; i < question.length; i++) {
-// console.log ("<span>" + questions [i].question + "</span>");
-
-//create new span and div tag for question and object passing thru array index
-var  que_tag = '<span>'+ questions[index].num + ". " + questions[index].question +'</span>';
-var option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
+question.innerHTML = '<span>'+ questions[index].num + ". " + questions[index].question +'</span>';
+option_list.innerHTML = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
 
 + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
 + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
 + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
 + '<div class="option"><span>'+ questions[index].options[4] +'</span></div>';
-que_text.textContent = que_tag; //add new span tag inside que tag
-option_list.textContent = option_tag; //add new div tag inside option tag
-
+} 
 
 //next button clicked - event listenr
 nextqButton.addEventListener ("click", function () {
-    showQuestions();
-    // console.log("hello world");
+    showQuestions(index);
+    index++
+    console.log(questions[index]);
 }
 )
+//if user clicked on option
+
+// option_list.addEventListener ( "click", function () {
+//     if (optionSelected === answer
+// }
+// )
+//if user answer is correct
+
+//if user answer is incorret
+
+
+//timer 
+var time = questions.length * 30;
+var timeEL = document.querySelector ("timer", 1000);
+var timeInterval = setInterval() 
+    secondsLeft--;
+  if (secondsLeft ===0); {
+    clearInterval(timerInterval)
+  }
+)}

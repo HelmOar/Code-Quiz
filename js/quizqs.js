@@ -14,25 +14,25 @@ var questions = [
        
     {
         num: 2,
-        question: "What is the initial index of an Array?",
-        answer: "0",
+        question: "What CSS property is used to specify the transparency of an element?",
+        answer: "a.	opacity",
         options: [
-            "10",
-            "0",
-            "1",
+            "visibility",
+            "transparancy",
+            "mutability",
             "None of these"   
                     ]
      },
 
      {
         num: 3,
-        question: "Which of the following is the paragraph tag in HTML?",
-        answer: "<p>",
+        question: "Which of the following is NOT a JavaSript keyword to declare variables ?",
+        answer: "decl",
         options: [
-            "<par>",
-            "<para>",
-            "<p>",
-            "None of these"   
+            "let",
+            "var",
+            "decl",
+            "const"   
                     ]
      },
 
