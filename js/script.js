@@ -24,19 +24,23 @@ function showQuestions(index) {
 
 // Displaying questions from the array
 
-function showQuestions(index){
-for (var i = 0; i < questions.length; i++) {
-console.log ("<span>" + questions [i].question + "</span>");
+// function showQuestions(index){
+// for (var i = 0; i < question.length; i++) {
+// console.log ("<span>" + questions [i].question + "</span>");
 
-// if (response === questions.answer) {
-     
-// }
+//create new span and div tag for question and object passing thru array index
+var  que_tag = '<span>'+ questions[index].num + ". " + questions[index].question +'</span>';
+var option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
 
-// }   
++ '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
++ '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
++ '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
++ '<div class="option"><span>'+ questions[index].options[4] +'</span></div>';
+que_text.textContent = que_tag; //add new span tag inside que tag
+option_list.textContent = option_tag; //add new div tag inside option tag
 
-// question = text.Content=qTag;
-//next button clicked - event listener needs a string
-}}
+
+//next button clicked - event listenr
 nextqButton.addEventListener ("click", function () {
     showQuestions();
     // console.log("hello world");
