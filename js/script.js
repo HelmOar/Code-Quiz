@@ -60,4 +60,3 @@ var timeInterval = setInterval()
   if (secondsLeft ===0); {
     clearInterval(timerInterval)
   }
-)}
