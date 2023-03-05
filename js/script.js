@@ -7,6 +7,9 @@ var currentQuestion = 1
 var index = 0
 var question = document.querySelector ("#question")
 var option_list = document.querySelector ("#option_list")
+var secondsLeft = questions.length * 5;
+var timeEL = document.querySelector ("#timer-sec");
+var timeInterval;
 // if startQuiz button clicked"
 // //  initiate question by click on start
 // question toggle static /active - visible/invisible
@@ -14,6 +17,8 @@ var option_list = document.querySelector ("#option_list")
 startButton.addEventListener("click", function () {
     startBox.setAttribute("class", "hide")
     questionCard.removeAttribute("class", "hide")
+    timeInterval = setInterval(timeStamp, 1000) 
+    showQuestions(index);
 });
 
 
@@ -26,19 +31,21 @@ function showQuestions(index) {
     // Displaying questions from the array
 
 question.innerHTML = '<span>'+ questions[index].num + ". " + questions[index].question +'</span>';
-option_list.innerHTML = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
+option_list.innerHTML = '<button class="option"><span>'+ questions[index].options[0] +'</span></button>'
 
-+ '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
-+ '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
-+ '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
-+ '<div class="option"><span>'+ questions[index].options[4] +'</span></div>';
++ '<button class="option"><span>'+ questions[index].options[1] +'</span></button>'
++ '<button class="option"><span>'+ questions[index].options[2] +'</span></button>'
++ '<button class="option"><span>'+ questions[index].options[3] +'</span></button>';
+ 
 } 
-
+var elButton = document.querySelector(".option") 
 //next button clicked - event listenr
-nextqButton.addEventListener ("click", function () {
+elButton.addEventListener ("click", function (event) {
+    console.log (event.target);
     showQuestions(index);
+    console.log (elButton);
     index++
-    console.log(questions[index]);
+  
 }
 )
 //if user clicked on option
@@ -50,13 +57,17 @@ nextqButton.addEventListener ("click", function () {
 //if user answer is correct
 
 //if user answer is incorret
+function evaluateAnswer () {
 
+}
 
 //timer 
-var time = questions.length * 30;
-var timeEL = document.querySelector ("timer", 1000);
-var timeInterval = setInterval() 
+function timeStamp () {
+   
     secondsLeft--;
-  if (secondsLeft ===0); {
+    timeEL.textContent=secondsLeft;
+  if (secondsLeft <= 0); {
     clearInterval(timerInterval)
-  }
+}
+
+}

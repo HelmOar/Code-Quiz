@@ -108,9 +108,15 @@ p{
 }
 #option_list {
     cursor:pointer;
+    display: flex;
+    flex-direction: column;
+}
+.option {
+    background-color: #BFACE2;
 }
 
 
+ 
 .hide {
     display:none;
 }
