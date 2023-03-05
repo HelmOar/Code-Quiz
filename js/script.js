@@ -46,7 +46,7 @@ btnEl.addEventListener ("click",(e) => {
     if (userGuess === rightAnswer) {
         alert("correct! click next question button");
     } else {
-        alert ("incorrect! click next question button ")
+        alert ("incorrect! click next question button ");
     }
 });
 
