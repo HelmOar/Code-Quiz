@@ -15,7 +15,7 @@ var questions = [
     {
         num: 2,
         question: "What CSS property is used to specify the transparency of an element?",
-        answer: "a.	opacity",
+        answer: "opacity",
         options: [
             "visibility",
             "transparancy",

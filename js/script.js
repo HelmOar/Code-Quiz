@@ -47,13 +47,13 @@ btnEl.addEventListener ("click",(e) => {
         alert("correct! click next question button");
     } else {
         alert ("incorrect! click next question button ");
+        index++;
     }
 });
 
 var elButton = document.getElementById("nextq-button");
 elButton.addEventListener("click", function (event) {
     showQuestions(index);
-    index++;
 });
 //if user clicked on option
 
