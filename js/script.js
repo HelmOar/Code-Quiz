@@ -38,16 +38,23 @@ option_list.innerHTML = '<button class="option"><span>'+ questions[index].option
 + '<button class="option"><span>'+ questions[index].options[3] +'</span></button>';
  
 } 
-var elButton = document.querySelector(".option") 
+var btnEl = document.getElementById("option_list");
 //next button clicked - event listenr
-elButton.addEventListener ("click", function (event) {
-    console.log (event.target);
+btnEl.addEventListener ("click",(e) => {
+    var userGuess = e.target.innerHTML;
+    var rightAnswer = questions[index].answer;
+    if (userGuess === rightAnswer) {
+        alert("correct! click next question button");
+    } else {
+        alert ("incorrect! click next question button ")
+    }
+});
+
+var elButton = document.getElementById("nextq-button");
+elButton.addEventListener("click", function (event) {
     showQuestions(index);
-    console.log (elButton);
-    index++
-  
-}
-)
+    index++;
+});
 //if user clicked on option
 
 // option_list.addEventListener ( "click", function () {

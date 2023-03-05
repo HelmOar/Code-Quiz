@@ -19,7 +19,7 @@ var questions = [
         options: [
             "visibility",
             "transparancy",
-            "mutability",
+            "opacity",
             "None of these"   
                     ]
      },
