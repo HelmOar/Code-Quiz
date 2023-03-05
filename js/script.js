@@ -61,7 +61,7 @@ gameOver.addEventListener("click", function () {
 
     questionCard.setAttribute("class", "hide")
     gameOver.removeAttribute("class", "hide")
-    timeInterval = setInterval(timeStamp, 1000) 
+    
     
 });
 
