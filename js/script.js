@@ -44,16 +44,20 @@ btnEl.addEventListener ("click",(e) => {
     var userGuess = e.target.innerHTML;
     var rightAnswer = questions[index].answer;
     if (userGuess === rightAnswer) {
-        alert("correct! click next question button");
-        index++;
+        getElementById ("display result") ;
+        showMessage("correct! click ok and answer next question");
+        
     } else {
-        alert ("incorrect! click next question button ");
+        getElementbyId
+        getElementById ("display result") ;
+        showMessage("correct! click ok and answer next question");
         
     }
+    index++;
 });
 
-var elButton = document.getElementById("nextq-button");
-elButton.addEventListener("click", function (event) {
+// var elButton = document.getElementById("nextq-button");
+btnEl.addEventListener("click", function (event) {
     showQuestions(index);
 });
 //if user clicked on option
