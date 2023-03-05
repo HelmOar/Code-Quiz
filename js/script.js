@@ -54,12 +54,17 @@ elButton.addEventListener ("click", function (event) {
 //     if (optionSelected === answer
 // }
 // )
+
+function evaluateAnswer (answer) {
+    clearInterval (timeEL);
+    var userAns = answer.textContent;
+    var correcAns = questions[index].answer;
+
+}
 //if user answer is correct
 
 //if user answer is incorret
-function evaluateAnswer () {
 
-}
 
 //timer 
 function timeStamp () {
