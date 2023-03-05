@@ -10,6 +10,7 @@ var option_list = document.querySelector ("#option_list")
 var secondsLeft = questions.length * 5;
 var timeEL = document.querySelector ("#timer-sec");
 var timeInterval;
+var gameOver = document.querySelector ("gameOver");
 // if startQuiz button clicked"
 // //  initiate question by click on start
 // question toggle static /active - visible/invisible
@@ -44,28 +45,29 @@ btnEl.addEventListener ("click",(e) => {
     var userGuess = e.target.innerHTML;
     var rightAnswer = questions[index].answer;
     if (userGuess === rightAnswer) {
-        getElementById ("display result") ;
-        showMessage("correct! click ok and answer next question");
+        document.getElementById ("displayResult").textContent = "Correct!"
         
     } else {
-        getElementbyId
-        getElementById ("display result") ;
-        showMessage("correct! click ok and answer next question");
-        
+        // alert ("wrong! click ok and answer next question");
+        document.getElementById ("displayResult").textContent = "Wrong!"
     }
     index++;
 });
 
-// var elButton = document.getElementById("nextq-button");
-btnEl.addEventListener("click", function (event) {
-    showQuestions(index);
+gameOver.addEventListener("click", function () [11] {
+    questionCard.setAttribute("class", "hide")
+    gameOver.removeAttribute("class", "hide")
+    timeInterval = setInterval(timeStamp, 1000) 
+    
 });
-//if user clicked on option
 
-// option_list.addEventListener ( "click", function () {
-//     if (optionSelected === answer
-// }
-// )
+
+// var elButton = document.getElementById("nextq-button");
+
+// btnEl.addEventListener("click", function (event) {
+//     showQuestions(index);
+// });
+
 
 function evaluateAnswer (answer) {
     clearInterval (timeEL);

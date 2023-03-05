@@ -28,7 +28,7 @@ Try to answer the following code-related questions within the time limit.<br/>Ke
     <div>
      <!-- quiz question card -->
      <div id="question-card" class="hide">
-        <header>
+        <header></header>
            <H3>CODE QUIZ</H3>
         </header>
         <section id = "q-text">
@@ -49,13 +49,28 @@ Try to answer the following code-related questions within the time limit.<br/>Ke
                 <span></span>
             </div>
           </div>
-          <div id ="display result"></div>
+          <div id ="displayResult"></div>
           <footer id="q-textfooter"></footer>
-          <button id="nextq-button">Next Question</button>
+          <!-- <button id="nextq-button">Next Question</button> -->
     </section>
         
      </div>
     </div>
+   <!-- game over card -->
+    <div id="gameOver">
+       <h1>Game Over</h1> 
+       <h3
+        id ="showScore">
+        Your score was...
+    </h3>
+    
+    <form>
+        <label for="name">Enter name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <input type="submit" value="Submit">
+    </form>
+    </div>
+    </body>
     <script src="./js/quizqs.js"></script>
     <script src="./js/script.js"></script>
     
