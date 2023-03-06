@@ -19,13 +19,13 @@ startButton.addEventListener("click", function () {
     startBox.setAttribute("class", "hide");
     questionCard.removeAttribute("class", "hide");
     timeInterval = setInterval(timeStamp, 1000); 
-    showQuestions(index);
+    showQuestions();
 });
 
 
 //question cards built into an array - grabbing the next question
 //increment through the array )-(easiest way is ++)
-function showQuestions(index) {
+function showQuestions() {
   
     // console.log(questions[currentQuestion]);
     // currentQuestion++
@@ -37,8 +37,11 @@ option_list.innerHTML = '<button class="option"><span>'+ questions[index].option
 + '<button class="option"><span>'+ questions[index].options[1] +'</span></button>'
 + '<button class="option"><span>'+ questions[index].options[2] +'</span></button>'
 + '<button class="option"><span>'+ questions[index].options[3] +'</span></button>';
- 
+// console.log(questions);
 } 
+
+
+
 var btnEl = document.getElementById("option_list");
 //next button clicked - event listenr
 btnEl.addEventListener ("click",(e) => {
@@ -52,16 +55,16 @@ btnEl.addEventListener ("click",(e) => {
         document.getElementById ("displayResult").textContent = "Wrong!"
     }
     index++;
+    showQuestions()
 });
 
 
 
-    // WHEN the timer is 0 OR questions left equals zero, THEN then conditions you've written fire
-    // if (timeEL === 0 || currentQuestion == questions.length >=) {
-
-    // questionCard.setAttribute("class", "hide")
-    // gameOver.removeAttribute("class", "hide")
-    // };
+    // WHEN the timer is 0 OR questions left equals zero, THEN then conditions i've written fire
+    if (timeEL === 0 || currentQuestion >= questions.length) {
+    questionCard.setAttribute("class", "hide")
+    gameOver.removeAttribute("class", "hide")
+    };
 
 
 
@@ -88,7 +91,7 @@ function timeStamp (){
     var timer = setInterval(function() {
     document.getElementById("timer-sec").innerHTML="00:" + sec;
     sec--;
-    if (sec,0) {
+    if (sec == 0) {
         clearInterval (timer);
     }
 } , 1000);
