@@ -16,9 +16,9 @@ var gameOver = document.querySelector ("gameOver");
 // question toggle static /active - visible/invisible
 
 startButton.addEventListener("click", function () {
-    startBox.setAttribute("class", "hide")
-    questionCard.removeAttribute("class", "hide")
-    timeInterval = setInterval(timeStamp, 1000) 
+    startBox.setAttribute("class", "hide");
+    questionCard.removeAttribute("class", "hide");
+    timeInterval = setInterval(timeStamp, 1000); 
     showQuestions(index);
 });
 
@@ -54,16 +54,15 @@ btnEl.addEventListener ("click",(e) => {
     index++;
 });
 
-// gameOver.addEventListener("click", function () {
 
-//     // WHEN the timer is 0 OR questions left equals zero, THEN then conditions you've written fire
-//     if (timeEL === 0 || questions.length >= 11) {
 
-//     questionCard.setAttribute("class", "hide")
-//     gameOver.removeAttribute("class", "hide")
-//     } 
-    
-// });
+    // WHEN the timer is 0 OR questions left equals zero, THEN then conditions you've written fire
+    // if (timeEL === 0 || currentQuestion == questions.length >=) {
+
+    // questionCard.setAttribute("class", "hide")
+    // gameOver.removeAttribute("class", "hide")
+    // };
+
 
 
 // var elButton = document.getElementById("nextq-button");
@@ -86,8 +85,8 @@ function evaluateAnswer (answer) {
 //timer 
 function timeStamp (){
     var sec = 60;
-    var timer = setInterval(funtion)(){
-    document.getElementById("#timer-sec").innerHTML="00:" + sec;
+    var timer = setInterval(function() {
+    document.getElementById("timer-sec").innerHTML="00:" + sec;
     sec--;
     if (sec,0) {
         clearInterval (timer);
@@ -95,4 +94,3 @@ function timeStamp (){
 } , 1000);
 }
 
-}
