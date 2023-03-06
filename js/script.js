@@ -57,17 +57,16 @@ btnEl.addEventListener ("click",(e) => {
 gameOver.addEventListener("click", function () {
 
     // WHEN the timer is 0 OR questions left equals zero, THEN then conditions you've written fire
-    if (timeEL === 0 || questionsLength = [11]) {
+    if (timeEL === 0 || questionsLength === [11]) {
 
     questionCard.setAttribute("class", "hide")
     gameOver.removeAttribute("class", "hide")
-    
+    } 
     
 });
 
 
 // var elButton = document.getElementById("nextq-button");
-
 // btnEl.addEventListener("click", function (event) {
 //     showQuestions(index);
 // });
