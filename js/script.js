@@ -86,6 +86,7 @@ btnEl.addEventListener ("click",(e) => {
 // document.getElementById ("showScore").textContent = userScore;
 
 //timer 
+//Game Over - show score
 function timeStamp (){
     
     var timer = setInterval(function() {
@@ -103,8 +104,22 @@ function timeStamp (){
 } , 1000);
 }
 
-//Game Over - show score
 
-//Game Over - enter initials 
 
+//Game Over - enter initials store in local storage
+
+
+localStorage.setItem(Name, "initials" );
+localStorage.setItem(Score,"userScore" );
+
+// var score = localStorage.getItem("showScore");
+
+
+
+// You can define a key name while storing data to local storage which should be a string and value should be a string
+
+// // localStorage.setItem('key', 'value');
+// and to print, you can use getItem
+
+// console.log(localStorage.getItem('key'));
 //save initials and score on new page
