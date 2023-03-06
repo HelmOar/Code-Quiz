@@ -12,6 +12,10 @@ var timeEl = document.querySelector ("#timer-sec");
 var timeInterval;
 var gameOver = document.querySelector ("#gameOver");
 var sec = 70
+var userScore = 0
+
+
+
 // if startQuiz button clicked"
 // //  initiate question by click on start
 // question toggle static /active - visible/invisible
@@ -32,6 +36,16 @@ function showQuestions() {
     // currentQuestion++
     // Displaying questions from the array
 
+    if (index >= questions.length) {
+        console.log("GAMEOVER");
+        questionCard.setAttribute("class", "hide")
+        gameOver.removeAttribute("class", "hide")
+        //score showing is not showing the string and colon
+        document.getElementById ("showScore").textContent = "Your Score Was : " + userScore;
+        sec = 0;
+        return;
+        }
+
 question.innerHTML = '<span>'+ questions[index].num + ". " + questions[index].question +'</span>';
 option_list.innerHTML = '<button class="option"><span>'+ questions[index].options[0] +'</span></button>'
 
@@ -50,6 +64,8 @@ btnEl.addEventListener ("click",(e) => {
     var rightAnswer = questions[index].answer;
     if (userGuess === rightAnswer) {
         document.getElementById ("displayResult").textContent = "Correct!"
+        userScore += 1;
+        console.log(userScore);
         
     } else {
         // alert ("wrong! click ok and answer next question");
@@ -62,11 +78,12 @@ btnEl.addEventListener ("click",(e) => {
 
 //ending game if questions are done
 
-if (questions.index >= questions.length) {
-questionCard.setAttribute("class", "hide")
-gameOver.removeAttribute("class", "hide")
-}
 
+
+
+// game over and score is displayed..
+
+// document.getElementById ("showScore").textContent = userScore;
 
 //timer 
 function timeStamp (){
@@ -81,7 +98,7 @@ function timeStamp (){
         console.log("Game Over")
     questionCard.setAttribute("class", "hide")
     gameOver.removeAttribute("class", "hide")
-
+    document.getElementById ("showScore").textContent = "Your Score Was : " + userScore;
     }
 } , 1000);
 }
