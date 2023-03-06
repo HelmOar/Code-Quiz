@@ -75,13 +75,13 @@ var questions = [
 
      {
         num: 7,
-        question: "Which is the correct way to comment out something in HTML??",
-        answer: "Using <!-- and -->",
+        question: "Which is the correct way to comment out something in HTML?",
+        answer: "None of these",
         options: [
             "Using ## and #",
-            "Using <!-- and -->",
-            "Using </-- and -/->",
-            "Using <!-- and -!>"   
+            "Using [-- and --]",
+            "Using *-- and --*",
+            "None of these"   
                     ]
      },
 
