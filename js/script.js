@@ -8,10 +8,10 @@ var index = 0
 var question = document.querySelector ("#question")
 var option_list = document.querySelector ("#option_list")
 var secondsLeft = questions.length * 5;
-var timeEL = document.querySelector ("#timer-sec");
+var timeEl = document.querySelector ("#timer-sec");
 var timeInterval;
-var gameOver = document.querySelector ("gameOver");
-var sec = 60
+var gameOver = document.querySelector ("#gameOver");
+var sec = 70
 // if startQuiz button clicked"
 // //  initiate question by click on start
 // question toggle static /active - visible/invisible
@@ -60,42 +60,34 @@ btnEl.addEventListener ("click",(e) => {
     showQuestions()
 });
 
+//ending game if questions are done
 
-
-    // WHEN the timer is 0 OR questions left equals zero, THEN then conditions i've written fire
-    if (sec === 0 || index >= questions.length) {
-    questionCard.setAttribute("class", "hide")
-    gameOver.removeAttribute("class", "hide")
-    };
-
-
-
-// var elButton = document.getElementById("nextq-button");
-// btnEl.addEventListener("click", function (event) {
-//     showQuestions(index);
-// });
-
-
-// function evaluateAnswer (answer) {
-//     clearInterval (timeEL);
-//     var userAns = answer.textContent;
-//     var correcAns = questions[index].answer;
-
-// }
-//if user answer is correct
-
-//if user answer is incorret
+if (questions.index >= questions.length) {
+questionCard.setAttribute("class", "hide")
+gameOver.removeAttribute("class", "hide")
+}
 
 
 //timer 
 function timeStamp (){
-    var sec = 60;
+    
     var timer = setInterval(function() {
-    document.getElementById("timer-sec").innerHTML="00:" + sec;
+    timeEl.innerHTML ="00:" + sec;
     sec--;
-    if (sec == 0) {
+    if (sec <= 0) {
+        timeEl.innerHTML = "00.00"
         clearInterval (timer);
+        
+        console.log("Game Over")
+    questionCard.setAttribute("class", "hide")
+    gameOver.removeAttribute("class", "hide")
+
     }
 } , 1000);
 }
 
+//Game Over - show score
+
+//Game Over - enter initials 
+
+//save initials and score on new page
