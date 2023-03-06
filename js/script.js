@@ -11,6 +11,7 @@ var secondsLeft = questions.length * 5;
 var timeEL = document.querySelector ("#timer-sec");
 var timeInterval;
 var gameOver = document.querySelector ("gameOver");
+var sec = 60
 // if startQuiz button clicked"
 // //  initiate question by click on start
 // question toggle static /active - visible/invisible
@@ -18,8 +19,8 @@ var gameOver = document.querySelector ("gameOver");
 startButton.addEventListener("click", function () {
     startBox.setAttribute("class", "hide");
     questionCard.removeAttribute("class", "hide");
-    timeInterval = setInterval(timeStamp, 1000); 
     showQuestions();
+    timeStamp();
 });
 
 
@@ -53,6 +54,7 @@ btnEl.addEventListener ("click",(e) => {
     } else {
         // alert ("wrong! click ok and answer next question");
         document.getElementById ("displayResult").textContent = "Wrong!"
+        sec-=10;
     }
     index++;
     showQuestions()
@@ -61,7 +63,7 @@ btnEl.addEventListener ("click",(e) => {
 
 
     // WHEN the timer is 0 OR questions left equals zero, THEN then conditions i've written fire
-    if (timeEL === 0 || currentQuestion >= questions.length) {
+    if (sec === 0 || index >= questions.length) {
     questionCard.setAttribute("class", "hide")
     gameOver.removeAttribute("class", "hide")
     };
@@ -74,12 +76,12 @@ btnEl.addEventListener ("click",(e) => {
 // });
 
 
-function evaluateAnswer (answer) {
-    clearInterval (timeEL);
-    var userAns = answer.textContent;
-    var correcAns = questions[index].answer;
+// function evaluateAnswer (answer) {
+//     clearInterval (timeEL);
+//     var userAns = answer.textContent;
+//     var correcAns = questions[index].answer;
 
-}
+// }
 //if user answer is correct
 
 //if user answer is incorret
