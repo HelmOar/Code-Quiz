@@ -129,22 +129,20 @@ submitButton.addEventListener( "click", function(event) {
 
 })
 
-// function getHighscore () {
-highScoresList =
-JSON.parse(Window.localStorage.getItem('highscores')) || [];
+function getHighscore () {
+highScoresList = JSON.parse(localStorage.getItem('highscores')) || [];
 console.log(highScoresList);
 highScoresList.sort(function (a,b) {
     return b.score - a.score;
 });
 
-// for (var i = 0; i < highScoresList.length; i += 1) {
-//     var newScore = document.createElement("li");
-//     //access the information from 
-//     highScoresList [i].initials and highScoresList[i].score;
-//     highScoresList.appendChild(highScoreList);
+for (var i = 0; i < highScoresList.length; i += 1) {
 
-
-
-
-
+    var newScore = document.createElement("li");
+    newScore.innerHTML=  highScoresList [i].initials  + " : " +  highScoresList[i].userScore;
+    //access the information from 
+   
+    displayResult.appendChild(newScore);
+}}
+     
 
