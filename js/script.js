@@ -129,7 +129,7 @@ function getHighscore () {
 //retrieve player ititials and score from local storage
 //append list item to unordered list 
 function displayPlayerResults() {
-    displayResult.appendChild
+    displayResult.appendChild(playerName.value, userScore);
 }
 ;
 
