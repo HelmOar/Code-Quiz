@@ -13,8 +13,11 @@ var timeInterval;
 var gameOver = document.querySelector ("#gameOver");
 var sec = 70
 var userScore = 0
-
-
+var initialsEl = document.querySelector("#initials");
+var playerResults = document.querySelector("#showScore");
+var playerNameButton = document.querySelector("#Initials");
+var submitButton = document.querySelector("#submit");
+var highScorePage = document.querySelector("#highScorePage");
 
 // if startQuiz button clicked"
 // //  initiate question by click on start
@@ -106,20 +109,23 @@ function timeStamp (){
 
 
 
-//Game Over - enter initials store in local storage
+//Game Over - enter initials store in local storage submit open next page
+submitButton.addEventListener( "click", function() {
+    highScorePage.setAttribute("class", "hide");
+    gameOver.removeAttribute("class", "hide");
+   
+})
+//retrieve player ititials from form
+// displayPlayerResults() 
+//     displayMessage.playerResults.textContent = message
 
 
-localStorage.setItem(Name, "initials" );
-localStorage.setItem(Score,"userScore" );
+// var Name = localStorage
+// localStorage.setItem(Name, "initials" );
+// localStorage.setItem(Score,"userScore" );
 
-// var score = localStorage.getItem("showScore");
+// localStorage.getItem(Name, "initials" );
+// localStorage.getItem(Score,"userScore" );
 
 
 
-// You can define a key name while storing data to local storage which should be a string and value should be a string
-
-// // localStorage.setItem('key', 'value');
-// and to print, you can use getItem
-
-// console.log(localStorage.getItem('key'));
-//save initials and score on new page

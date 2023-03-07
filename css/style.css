@@ -147,12 +147,24 @@ span {
     
 }
  
+#hiScorePage {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background-color:#ECF2FF;
+    border-radius:5px;
+    padding:10px;
+    
+}
 #yourScore {
     color:#3E54AC;
 }
  h3  {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
+    color: #3E54AC;
  }
  
  input[type=submit],
