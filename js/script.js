@@ -126,9 +126,10 @@ submitButton.addEventListener( "click", function(event) {
 function getHighscore () {
     localStorage.getItem(playerName.value, userScore)
 }
-//retrieve player ititials from form
+//retrieve player ititials and score from local storage
+//append list item to unordered list 
 function displayPlayerResults() {
-    
+    displayResult.appendChild
 }
 ;
 

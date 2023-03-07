@@ -159,6 +159,10 @@ span {
     border:solid 2px var(--lilac);
     
 }
+#highScore {
+    color:black;
+
+}
 #yourScore {
     color:#3E54AC;
 }
