@@ -18,7 +18,7 @@ var playerResults = document.querySelector("#showScore");
 var playerNameButton = document.querySelector("#Initials");
 var submitButton = document.querySelector("#initialsBtn");
 var highScorePage = document.querySelector("#highScorePage");
-var timerBox = document.querySelector("timer");
+var timerBox = document.querySelector("#timer");
 
 // if startQuiz button clicked"
 // //  initiate question by click on start
@@ -26,7 +26,7 @@ var timerBox = document.querySelector("timer");
 
 startButton.addEventListener("click", function () {
     startBox.setAttribute("class", "hide");
-    // timerBox.removeAttribute("class", "hide");
+    timerBox.removeAttribute("class", "hide");
     questionCard.removeAttribute("class", "hide");
     showQuestions();
     timeStamp();
@@ -104,13 +104,18 @@ function timeStamp (){
         console.log("Game Over")
     questionCard.setAttribute("class", "hide")
     gameOver.removeAttribute("class", "hide")
-    // timerBox.setAttribute("class", "hide")
+    timerBox.setAttribute("class", "hide")
     document.getElementById ("showScore").textContent = "Your Score Was : " + userScore;
     }
 } , 1000);
 }
 
 function setHighscore (){
+    initials: submitButton.value.trim() ,
+    score: playerResults.value.trim() ,
+};
+    localStorage.setItem("showScore");
+    localStorage.setItem("initials" );
     //code out logic to set into local storage input value
 }
 function getHighscore () {
