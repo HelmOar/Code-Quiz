@@ -115,8 +115,6 @@ for (var i = 0; i < highScoresList.length; i += 1) {
 
     var newScore = document.createElement("li");
     newScore.innerHTML=  highScoresList [i].initials  + " : " +  highScoresList[i].userScore;
-   
-   
     displayResult.appendChild(newScore);
 }}
      
