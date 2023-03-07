@@ -20,6 +20,7 @@ var submitButton = document.querySelector("#initialsBtn");
 var highScorePage = document.querySelector("#highScorePage");
 var timerBox = document.querySelector("#timer");
 var displayResult = document.querySelector("#highScore");
+var highScoresList = [];
 // if startQuiz button clicked"
 // //  initiate question by click on start
 // question toggle static /active - visible/invisible
@@ -110,8 +111,13 @@ function timeStamp (){
 } , 1000);
 }
 
-function setHighscore (){
-    localStorage.setItem(playerName.value, userScore)
+function setHighscore () {
+    var playerInitials = playerName.value;
+    highScoresList = JSON.parse(localStorage.getItem('highscores')) || [];
+    var newScore = {userScore, initials:playerInitials};
+    highScoresList.push(newScore);
+    console.log(highScoresList);
+    localStorage.setItem('highscores',JSON.stringify(highScoresList));
 }
  
 submitButton.addEventListener( "click", function(event) {
@@ -123,15 +129,22 @@ submitButton.addEventListener( "click", function(event) {
 
 })
 
-function getHighscore () {
-    localStorage.getItem(playerName.value, userScore)
-}
-//retrieve player ititials and score from local storage
-//append list item to unordered list 
-function displayPlayerResults() {
-    displayResult.appendChild(playerName.value, userScore);
-}
-;
+// function getHighscore () {
+highScoresList =
+JSON.parse(Window.localStorage.getItem('highscores')) || [];
+console.log(highScoresList);
+highScoresList.sort(function (a,b) {
+    return b.score - a.score;
+});
+
+// for (var i = 0; i < highScoresList.length; i += 1) {
+//     var newScore = document.createElement("li");
+//     //access the information from 
+//     highScoresList [i].initials and highScoresList[i].score;
+//     highScoresList.appendChild(highScoreList);
+
+
+
 
 
 
