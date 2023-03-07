@@ -5,10 +5,10 @@
     --dark-blue:#3E54AC;
 }
 
-
 header {
     background-color: #BFACE2;
 }
+
 #timer {
     float:right;
     background-color: #BFACE2;
@@ -21,10 +21,11 @@ header {
 
 #timer-sec{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin top:0;
+    margin top: 0px;
     margin-bottom: 10%;
     text-align: center;
 }
+
 h2 {
     font-size:80%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -33,10 +34,6 @@ h2 {
     margin-bottom: 5%;
 }
   
-
-
-
-
 .box {
     display: flex;
     flex-direction: column;
@@ -47,23 +44,25 @@ h2 {
     justify-content: center;
     align-items: center;
     padding:40px;
-    padding-bottom: 60pix;
+    padding-bottom: 60px;
     background-color: var(--dark-blue);
     border-radius: 5px;
     max-height:50%;
 }
+
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: coral;
     text-align: center;
 }
+
 p{
     text-align: center;
     color: #ECF2FF;
     font-size: larger;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
 }
+
 #start-button {
     width:30%;
     height: 30%;
@@ -86,14 +85,13 @@ p{
 #q-textfooter{
     display: flex;
     justify-content: center;
-    
 }
+
 #div {
     background-color: white;
 }
     
 #question-card {
-    
     position: absolute;
     top:50%;
     left: 50%;
@@ -103,14 +101,14 @@ p{
     border-radius:5px;
     padding:10px;
     border:solid var(--lilac) 2px;
-    
-    
 }
+
 #option_list {
     cursor:pointer;
     display: flex;
     flex-direction: column;
 }
+
 .option {
     background-color: #BFACE2;
 }
@@ -120,34 +118,21 @@ p{
     color:coral;
     font-size: larger;
     font-weight: 900;
-
-
 }
  
-
 .hide {
     display:none;
 }
+
 span {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 #q-span {
     font-size: larger;
     font-weight: 600;
 }
 
-/* #gameOver {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    background-color:#ECF2FF;
-    border-radius:5px;
-    padding:10px;
-    
-} */
- 
 #highScorePage, #gameOver {
     position: absolute;
     top:50%;
@@ -164,23 +149,22 @@ span {
     color:black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:medium;
-
 }
+
 #yourScore {
     color:#3E54AC;
 }
- h3  {
+
+h3  {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     color: #3E54AC;
  }
  
-  #initialsBtn,
+ #initialsBtn,
  form {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #3E54AC;
     margin:5px 0px;
  }
 
-
-}
