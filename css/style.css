@@ -16,7 +16,7 @@ header {
     height: 100px;
     margin-right: 18%;
     border-radius:  5px;
-    border:2px solid #3E54AC;
+    border:2px solid var(--lilac);
 }
 
 #timer-sec{
@@ -135,7 +135,7 @@ span {
     font-weight: 600;
 }
 
-#gameOver {
+/* #gameOver {
     position: absolute;
     top:50%;
     left: 50%;
@@ -145,9 +145,9 @@ span {
     border-radius:5px;
     padding:10px;
     
-}
+} */
  
-#hiScorePage {
+#highScorePage, #gameOver {
     position: absolute;
     top:50%;
     left: 50%;
@@ -156,6 +156,7 @@ span {
     background-color:#ECF2FF;
     border-radius:5px;
     padding:10px;
+    border:solid 2px var(--lilac);
     
 }
 #yourScore {
@@ -167,7 +168,7 @@ span {
     color: #3E54AC;
  }
  
- input[type=submit],
+  #initialsBtn,
  form {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #3E54AC;

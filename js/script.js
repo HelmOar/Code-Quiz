@@ -16,8 +16,9 @@ var userScore = 0
 var initialsEl = document.querySelector("#initials");
 var playerResults = document.querySelector("#showScore");
 var playerNameButton = document.querySelector("#Initials");
-var submitButton = document.querySelector("#submit");
+var submitButton = document.querySelector("#initialsBtn");
 var highScorePage = document.querySelector("#highScorePage");
+var timerBox = document.querySelector("timer");
 
 // if startQuiz button clicked"
 // //  initiate question by click on start
@@ -25,6 +26,7 @@ var highScorePage = document.querySelector("#highScorePage");
 
 startButton.addEventListener("click", function () {
     startBox.setAttribute("class", "hide");
+    // timerBox.removeAttribute("class", "hide");
     questionCard.removeAttribute("class", "hide");
     showQuestions();
     timeStamp();
@@ -102,18 +104,27 @@ function timeStamp (){
         console.log("Game Over")
     questionCard.setAttribute("class", "hide")
     gameOver.removeAttribute("class", "hide")
+    // timerBox.setAttribute("class", "hide")
     document.getElementById ("showScore").textContent = "Your Score Was : " + userScore;
     }
 } , 1000);
 }
 
-
-
+function setHighscore (){
+    //code out logic to set into local storage input value
+}
+function getHighscore () {
+    //get high scores from local storage
+}
 //Game Over - enter initials store in local storage submit open next page
-submitButton.addEventListener( "click", function() {
-    highScorePage.setAttribute("class", "hide");
-    gameOver.removeAttribute("class", "hide");
-   
+submitButton.addEventListener( "click", function(event) {
+    
+    event.preventDefault()
+    highScorePage.removeAttribute("class", "hide");
+    gameOver.setAttribute("class", "hide");
+   setHighscore();
+   getHighscore();
+
 })
 //retrieve player ititials from form
 // displayPlayerResults() 
