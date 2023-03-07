@@ -8,44 +8,31 @@ Code Quiz is an application that functions as a coding assessment which could be
 
 The quiz is a timed challenge with multiple-choice style questions. The user is able to view their result as they progress through each question and then finally is able to save their score on the final page. 
 
-The app runs on the browser, featuring dynamically updated HTML, and CSS powered by JavaScript code. The interface is clean, polished and responsive. 
+The app runs on the browser, featuring dynamically updated HTML, and CSS powered by JavaScript code. The interface is clean, polished and responsive. The various parts of the quiz hide and appear as necessary. The user's score is acculumated and the stored in local storage where it is recalled in order to appear on the High Score final page.
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+The quiz uses JavaScript methods to move between the hidden and unhidden element - these are powered by eventlisteners. The quiz question data is stored in an array in it's own file where it is passed through an if loop before it is rendered on the page.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+The timer counts down the quiz time and also subtracts 10 seconds for each wrongly answered question. This makes for a challenging but not impossible game. 
 
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+The application can be used as a teaching method or as part of a possible interview process. 
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+  
+    ![video of quiz](https://user-images.githubusercontent.com/122151785/223545797-0007d1e4-47b2-422a-89e1-f6a842b1b9f2.mp4)
+    ![StartPage codequiz](https://user-images.githubusercontent.com/122151785/223546854-19a9425a-793b-40ab-a5bb-76ae13592af1.png)
 
 ## Credits
 
-Caroline Helmore
+Caroline Helmore 
+
+chelmore1@bigpond.com
 
 ## License
 
 No license required
-## Badges
 
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
 
