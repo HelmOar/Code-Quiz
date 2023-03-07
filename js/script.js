@@ -15,11 +15,11 @@ var sec = 70
 var userScore = 0
 var initialsEl = document.querySelector("#initials");
 var playerResults = document.querySelector("#showScore");
-var playerNameButton = document.querySelector("#Initials");
+var playerName = document.querySelector("#Initials");
 var submitButton = document.querySelector("#initialsBtn");
 var highScorePage = document.querySelector("#highScorePage");
 var timerBox = document.querySelector("#timer");
-
+var displayResult = document.querySelector("#highScore");
 // if startQuiz button clicked"
 // //  initiate question by click on start
 // question toggle static /active - visible/invisible
@@ -111,19 +111,10 @@ function timeStamp (){
 }
 
 function setHighscore (){
-    initials: submitButton.value.trim() ,
-    score: playerResults.value.trim() ,
-};
-    localStorage.setItem("showScore");
-    localStorage.setItem("initials" );
-    //code out logic to set into local storage input value
+    localStorage.setItem(playerName.value, userScore)
 }
-function getHighscore () {
-    //get high scores from local storage
-}
-//Game Over - enter initials store in local storage submit open next page
+ 
 submitButton.addEventListener( "click", function(event) {
-    
     event.preventDefault()
     highScorePage.removeAttribute("class", "hide");
     gameOver.setAttribute("class", "hide");
@@ -131,17 +122,15 @@ submitButton.addEventListener( "click", function(event) {
    getHighscore();
 
 })
+
+function getHighscore () {
+    localStorage.getItem(playerName.value, userScore)
+}
 //retrieve player ititials from form
-// displayPlayerResults() 
-//     displayMessage.playerResults.textContent = message
-
-
-// var Name = localStorage
-// localStorage.setItem(Name, "initials" );
-// localStorage.setItem(Score,"userScore" );
-
-// localStorage.getItem(Name, "initials" );
-// localStorage.getItem(Score,"userScore" );
+function displayPlayerResults() {
+    
+}
+;
 
 
 
