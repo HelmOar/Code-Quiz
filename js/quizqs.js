@@ -36,16 +36,6 @@ var questions = [
                     ]
      },
 
-     num: 3,
-        question: "What is Bootstrap ?",
-        answer: "an open source CSS development framework",
-        options: [
-            "an open source library of fonts",
-            "an open source JavaScript library",
-            "an open source CSS development framework",
-            "none of the above"   
-                    ]
-     },
 
      {
 
