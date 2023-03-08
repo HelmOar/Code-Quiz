@@ -21,8 +21,12 @@ The application can be used as a teaching method or as part of a possible interv
 
 ### Screen shots and video
 
+    ![video of quiz](./assets/Code%20Quiz.mp4)
   
     ![video of quiz](https://user-images.githubusercontent.com/122151785/223545797-0007d1e4-47b2-422a-89e1-f6a842b1b9f2.mp4)
+
+    ![Start Page of quiz](./assets/StartPage.codequiz.png)
+
     ![StartPage codequiz] (https://user-images.githubusercontent.com/122151785/223546854-19a9425a-793b-40ab-a5bb-76ae13592af1.png)
 
 ### App Link
