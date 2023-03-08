@@ -19,11 +19,15 @@ The timer counts down the quiz time and also subtracts 10 seconds for each wrong
 
 The application can be used as a teaching method or as part of a possible interview process. 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+### Screen shots and video
 
   
     ![video of quiz](https://user-images.githubusercontent.com/122151785/223545797-0007d1e4-47b2-422a-89e1-f6a842b1b9f2.mp4)
-    ![StartPage codequiz](https://user-images.githubusercontent.com/122151785/223546854-19a9425a-793b-40ab-a5bb-76ae13592af1.png)
+    ![StartPage codequiz] (https://user-images.githubusercontent.com/122151785/223546854-19a9425a-793b-40ab-a5bb-76ae13592af1.png)
+
+### App Link
+
+ https://helmoar.github.io/Code-Quiz/
 
 ## Credits
 
